@@ -1,0 +1,19 @@
+@import "Wrapper";
+
+.rekl{
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  padding: 20px 0;
+  //border-bottom: 1px solid $text-color;
+  color: $text-color;
+  gap: 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+
+  &__wrapper{
+    height: 40vh;
+    //border-top: 1px solid $text-color;
+    padding-top: $block-padding-top;
+  }
+}

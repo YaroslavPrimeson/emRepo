@@ -1,0 +1,46 @@
+@import "Wrapper";
+
+.dropdown {
+  display: flex;
+  //padding-top: 1em;
+  color: $text-color;
+  align-items: center;
+  padding-top: 50px;
+
+  &__title {
+    @include title-text-2;
+    width: 100px;
+    box-sizing: border-box;
+    margin: 0;
+  }
+
+  &__select {
+    outline: none;
+    overflow: hidden;
+    width: 80%;
+    cursor: pointer;
+    padding: 10px 0;
+    text-align-last: center; // centered text in dropdown menu
+    border: none;
+    font-size: $size-text-small;
+
+
+    //removing arrow form dropdown menu:
+    //-webkit-appearance: none;
+    //-moz-appearance: none;
+    //appearance: none;
+  }
+
+  &__option {
+    //background-color: $background;
+  }
+}
+
+@media (max-width: 767px) {
+  .dropdown {
+    font-size: 1.5em;
+    &__select {
+      width: 50%;
+    }
+  }
+}

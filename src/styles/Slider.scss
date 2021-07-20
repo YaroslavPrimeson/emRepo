@@ -1,0 +1,55 @@
+@import "Wrapper";
+
+.slider {
+  &__wrapper {
+
+    @include max-width-paddings;
+    position: relative;
+    min-height: 90vh;
+    padding-top: 6em;
+
+    & .swiper-button-next, .swiper-button-prev {
+      color: $color-gold;
+    }
+  }
+}
+
+.swiper-container {
+  width: 90%;
+  margin: 0 auto;
+  padding: 10px 0;
+}
+
+.swiper-pagination-bullet-active {
+  background: $color-gold;
+}
+
+.swiper-slide {
+  text-align: center;
+  font-size: 18px;
+
+
+  /* Center slide text vertically */
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  -webkit-align-items: center;
+  align-items: center;
+}
+
+@media (max-width: 767px) {
+  .slider {
+    &__cards__mobile {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+  }
+}

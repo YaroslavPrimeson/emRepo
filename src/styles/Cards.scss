@@ -1,0 +1,17 @@
+@import "Wrapper";
+
+.cards {
+  display: grid;
+  grid-template-columns: repeat( 3, minmax(200px, 1fr) );
+  grid-template-rows: repeat(auto-fit, auto);
+  padding: 0 1.6em 5em;
+  grid-gap: 20px 20px;
+  width: 100%;
+}
+
+@media (max-width: 991px) {
+  .cards {
+    grid-template-columns: repeat( 2, minmax(200px, 1fr) );
+    grid-template-rows: repeat(auto-fit, auto);
+  }
+}

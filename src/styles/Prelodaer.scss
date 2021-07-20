@@ -1,0 +1,64 @@
+@import "Wrapper";
+
+.preloader__container {
+  position: fixed;
+  height: 100vh;
+  width: 100vw;
+  left: 0;
+  top: 0;
+  background-color: $background;
+  z-index: 1004;
+
+  &.hide {
+    animation: hidePreloader 1s forwards;
+  }
+}
+
+.preloader__logo__container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 15vh;
+  height: 100%;
+  width: 100%;
+}
+
+.PositionLogoSvg {
+  height: 80%;
+
+}
+
+.preloader__number {
+  color: $white-color;
+  font-family: $font-1;
+  font-size: calc(5vh + 5vw);
+  position: absolute;
+  bottom: 2vh;
+  right: 2vw;
+
+}
+
+@keyframes hidePreloader {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
+}
+
+
+.preloader__line{
+  position: absolute;
+  left: 10vw;
+  top: 0;
+  width: 1px;
+  background: $white-color;
+  //height: 100%;
+  animation: 5s preloader__line 0s forwards linear;
+}
+//@keyframes preloader__line {
+//  to {
+//    height: 100%;
+//  }
+//}

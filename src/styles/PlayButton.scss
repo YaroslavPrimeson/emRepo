@@ -1,0 +1,53 @@
+@import "Wrapper";
+
+.playBtn {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  overflow: hidden;
+  border: 2px solid rgba(201, 171, 129, .5);
+  border-radius: 50%;
+  transition: background-color .3s;
+  z-index: 5;
+&__link {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+}
+  &__wrapper:hover {
+    background-color: rgba(201, 171, 129, .5);
+  }
+
+  &__wrapper {
+    border: 1px solid $text-color;
+    transition: background-color .3s;
+    margin: 5px;
+    border-radius: 50%;
+    overflow: hidden;
+    display: flex;
+    cursor: pointer;
+    background-color: transparent;
+    box-shadow: 0 0 5px 5px rgba(201, 171, 129, .5);
+position: relative;
+    &:hover {
+      //overflow: hidden;
+      background-color: rgba(201, 171, 129, .5);
+      box-shadow: 0 0 5px 5px rgba(201, 171, 129, 0);
+      border: none;
+    }
+
+    &:hover .playBtn__btn {
+      border-left: 75px solid white
+    }
+  }
+
+  &__btn {
+    margin: 15px 20px 15px 40px;
+    width: 0;
+    height: 0;
+    border-top: 50px solid transparent;
+    border-left: 75px solid $text-color;
+    border-bottom: 50px solid transparent;
+  }
+}

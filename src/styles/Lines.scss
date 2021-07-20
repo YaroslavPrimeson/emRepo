@@ -1,0 +1,21 @@
+.lines {
+  left: 110px;
+  width: calc(100% - 220px);
+  top: 0;
+  display: flex;
+  position: fixed;
+  border-left: 1px solid rgba(201, 171, 129, 0.5);
+  border-right: 1px solid rgba(201, 171, 129, 0.5);
+}
+
+
+.lines-n {
+  height: 100vh;
+  width: 20%;
+  box-sizing: border-box;
+  border-right: 1px solid rgba(201, 171, 129, .1);
+}
+
+.lines-n:last-child {
+  border: none;
+}

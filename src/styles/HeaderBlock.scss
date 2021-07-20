@@ -1,0 +1,52 @@
+@import "Wrapper";
+
+.component__header__block {
+  margin: 0;
+  text-align: center;
+  color: $text-color;
+
+  & h2 {
+    @include title-text-1;
+    font-size: $size-title;
+  }
+
+  &__text {
+    font-family: $font-5;
+    font-size: $size-text-small;
+    padding: 0.5em 0;
+    margin: 0;
+    color: white;
+  }
+
+  & h2 {
+    margin: 0;
+    font-weight: bold;
+    font-family: $under-title;
+  }
+}
+
+.component__header__block {
+  position: relative;
+  text-align: center;
+  max-width: 300px;
+  margin: 0 auto;
+
+  &__svg {
+    width: 60px;
+    height: 60px;
+
+    &.left {
+      left: 0;
+      top: 0;
+      transform: rotateY(180deg) translate(150%, 10%);;
+    }
+
+    &.right {
+      right: 0;
+      top: 0;
+      transform:  translate(150%,10%);
+    }
+
+    position: absolute;
+  }
+}

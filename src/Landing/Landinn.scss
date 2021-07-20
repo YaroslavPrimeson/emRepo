@@ -1,0 +1,531 @@
+@import url('https://fonts.googleapis.com/css2?family=Rubik+Mono+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100&family=Rubik+Mono+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Miniver&display=swap');
+@import "../styles/Wrapper";
+
+
+
+$background: #0b1315;
+$text-color: rgba(201, 171, 129, 0.69);
+$text-color2: rgba(201, 171, 129, 0.20);
+$white-color: white;
+$black-color: black;
+//$font-1: 'Caviar', sans-serif;
+//$font-1: 'Miniver', sans-serif;
+//$font-1: 'Rubik Mono One', sans-serif;
+//$font-2: 'Roboto', sans-serif;
+//$font-3: 'Miniver', sans-serif;
+
+
+$menu-width: calc(6vh + 6vw);
+
+$size-pading: calc(.8vh + .8vw);
+$size-pading2: calc(1.2vh + 1.2vw);
+$size-input: calc(1.5vh + 1.5vw);
+
+$size-text: calc(1.3em);
+$size-text-button: calc(.8vh + .8vw);
+$size-text2: calc(1.2vh + 1.2vw);
+$size-text3: calc(2.5vh + 2.5vw);
+$size-text-small: calc(.5vh + .5vw);
+
+.FontHeader {
+  font-family: $font-1;
+  font-size: calc(2vh + 2vw);
+  //font-weight: ;
+  color: $text-color;
+}
+
+.FontSubHeader {
+  font-family: $font-2;
+  font-size: calc(1.5vh + 1.5vw);;
+  //font-weight: ;
+  color: $text-color;
+}
+
+.FontText {
+  font-family: $font-2;
+  font-size: calc(1vh + 1vw);;
+  //font-weight: ;
+  color: $text-color;
+}
+
+.FontHeader2 {
+  @include title-text-1;
+  //font-weight: 900;
+  color: $text-color;
+  text-align: center;
+}
+
+.FontSubHeader2 {
+  @include title-text-2;
+  //font-weight: 700;
+  color: $white-color;
+}
+
+.FontText2 {
+  font-family: $font-2;
+  font-size: calc(1vh + 1vw);
+  //font-weight: 400;
+  color: $white-color;
+}
+
+.FontHeader3 {
+  font-family: $font-1;
+  font-size: 1.2em;
+  //font-weight: 900;
+  color: $white-color;
+  margin: 0;
+
+  & h3 {
+    margin: 0;
+    padding: 0;
+  }
+}
+
+.FontSubHeader3 {
+  font-family: $font-2;
+  font-size: calc(1.5vh + 1.5vw);
+  //font-weight: ;
+  color: $text-color;
+}
+
+.FontText3 {
+  font-family: $font-2;
+  font-size: calc(1vh + 1vw);
+  //font-weight: ;
+  color: $text-color;
+}
+
+h1, h2, h3, h4, h5, h6, p, label {
+  margin: 0;
+}
+
+
+.LandingContainer {
+  //background-color: $background;
+  color: $text-color;
+}
+
+.innerContainer {
+  z-index: 900 !important;
+  //width: calc(100% - calc(6vh + 6vw)) !important;
+  width: 100%;
+  padding: 10px 30px;
+}
+
+
+body {
+  background-color: $background;
+}
+
+//COntainer 1
+.FirstContainer {
+  height: 100vh;
+  width: 100%;
+  overflow: hidden !important;
+}
+
+.FirstContainerTextContainer {
+  color: $white-color;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.BigText {
+  font-family: $font-1;
+  font-size: calc(3.3vh + 3.3vw);
+  line-height: calc(3.1vh + 3.1vw);
+  white-space: nowrap;
+}
+
+.SmallText {
+  font-family: $font-2;
+  font-size: calc(1.3vh + 1.3vw);
+  //line-height: calc(1.1vh + 1.1vw);
+  white-space: nowrap;
+}
+
+.FirstContainerText1 {
+
+
+}
+
+.FirstContainerText2 {
+
+}
+
+.FirstContainerText3 {
+
+}
+
+.FirstContainerText4 {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+}
+
+$FirstContainerTextLineWidth: 35%;
+.FirstContainerTextLine {
+  position: absolute;
+  width: $FirstContainerTextLineWidth;
+  height: 1px;
+  background-color: $text-color;
+  right: 0;
+  animation: 7s FirstContainerTextLine 0s ease-in-out infinite;
+}
+
+@keyframes FirstContainerTextLine {
+  0% {
+    width: 0%;
+  }
+  50% {
+    width: $FirstContainerTextLineWidth;
+  }
+  100% {
+    width: 0%;
+  }
+}
+
+
+.FirstContainerTextContainer2 {
+  color: $white-color;
+  position: absolute;
+  bottom: 10%;
+  left: 10%;
+}
+
+.BigText2 {
+  font-family: $font-1;
+  font-weight: 400;
+  font-size: calc(.6vh + .6vw);
+  //line-height: calc(.7vh + .7vw);
+  white-space: nowrap;
+}
+
+.FirstContainerText5 {
+
+}
+
+.FirstContainerText6 {
+
+}
+
+.FirstContainerText7 {
+  color: $text-color !important;
+}
+
+
+//Menu
+.MenuContainer {
+  position: fixed;
+  width: $menu-width;
+  height: 100%;
+  right: 0;
+  z-index: 999;
+  background-color: $background;
+}
+
+#line1 {
+  position: absolute;
+  left: 0%;
+  width: 1px;
+  background-color: $text-color;
+  height: 100%;
+}
+
+.PositionMenuSvg {
+  position: absolute;
+  top: 0%;
+  padding: calc(2vh + 2vw);
+  //left: 5%;
+}
+
+.PositionPhoneSvg {
+  position: absolute;
+}
+
+.MenuSVGPath {
+  stroke-width: 10;
+  stroke-linejoin: round;
+  stroke: $text-color;
+  fill: none;
+  stroke-dasharray: 1200%;
+  animation: 15s webSvgDash 0s linear forwards;
+}
+
+.PhoneSVGPath {
+  stroke-width: 10;
+  stroke-linejoin: round;
+  stroke: $text-color;
+  fill: none;
+  stroke-dasharray: 1200%;
+  animation: 15s webSvgDash 0s linear forwards;
+}
+
+.forLogo {
+  justify-content: flex-end;
+}
+
+.CompanyLogo {
+  position: absolute;
+  top: 30%;
+  left: -35%;
+  width: calc(20vh + 20vw);
+
+  & img {
+    display: block;
+    //position: absolute;
+    width: 100%;
+    left: -70px;
+    top: -50px;
+    z-index: 0;
+  }
+}
+
+//SecondContainer
+.SecondContainer {
+  height: 100vh;
+  width: 100%;
+  background-color: $background;
+  z-index: 10;
+
+}
+
+.SecondContainerRow {
+  height: 100%;
+  width: 100%;
+}
+
+.ManImage {
+  //position: absolute;
+  //height: 100%;
+  bottom: calc(1% + 1px);
+  right: 10%;
+  //padding: 2vh;
+}
+
+.ManBorder {
+  position: absolute;
+  //width: 60%;
+  width: 90%;
+  height: 90%;
+  left: 0;
+  bottom: 0;
+  border: 1px solid $text-color;
+}
+
+.ManBorder1 {
+  position: absolute;
+  //width: 60%;
+  width: 90%;
+  height: 90%;
+  left: 1%;
+  bottom: 1%;
+  border: 1px solid $text-color;
+}
+
+.SecondContainerTextContainer {
+  padding: 15vh 10vh 10vh;
+}
+
+#SecondContainerText1 {
+  font-family: $font-1;
+  font-size: calc(2.3vh + 2.3vw);
+  //line-height: calc(2.1vh + 2.1vw);
+  white-space: nowrap;
+  color: $white-color;
+}
+
+#SecondContainerText2 {
+  font-family: $font-3;
+  //font-size: calc(1.3vh + 1.3vw);
+  //line-height: calc(1.1vh + 1.1vw);
+  white-space: nowrap;
+  padding-bottom: 5vw;
+
+}
+
+#SecondContainerText3 {
+  //padding-top: 10vh;
+  padding-right: 10vw;
+  font-family: $font-2;
+  //font-size: calc(1.3vh + 1.3vw);
+  //line-height: calc(1.5vh + 1.5vw);
+  color: $white-color;
+  //white-space: nowrap;
+}
+
+.PositionCoffePlant2Svg {
+  position: absolute;
+  height: 70%;
+  right: -5%;
+  bottom: -0%;
+}
+
+//.CoffeePlantSvg {
+//  stroke-width: 20;
+//  stroke-linejoin: round;
+//  stroke: $text-color;
+//  fill: none;
+//  stroke-dasharray: 6200%;
+//  animation: 15s CoffeePlantSvg 0s linear forwards;
+//}
+//
+//@keyframes CoffeePlantSvg {
+//  0% {
+//    stroke-dashoffset: 6200%;
+//  }
+//  //50% {
+//  //  stroke-dashoffset: 0%;
+//  //}
+//  //100%{
+//  //  stroke-dashoffset: 6200%;
+//  //}
+//  100% {
+//    stroke-dashoffset: 0%;
+//  }
+//}
+
+
+//ThirdContainer
+.ThirdContainer {
+  padding: 5vh 0 0;
+  position: relative;
+  height: 100vh;
+  width: 100%;
+  //background-color: $background;
+  //padding: 5vh;
+  z-index: 999 !important;
+}
+
+
+//LogoSvg
+.PositionMobileSimplePageSvg {
+  position: absolute;
+  left: 0;
+  transform: translate(-88%,10%);
+  top: 0;
+  height: 70vh;
+}
+
+//.WebSVGPath {
+//  stroke-width: .2;
+//  stroke-linejoin: round;
+//  stroke: $text-color;
+//  fill: none;
+//  stroke-dasharray: 1200%;
+//  //animation: 5s webSvgDash 0s linear forwards;
+//}
+
+@keyframes webSvgDash {
+  0% {
+    stroke-dashoffset: 1200%;
+  }
+  100% {
+    stroke-dashoffset: 0%;
+  }
+}
+
+
+select {
+  background: transparent;
+  color: $text-color;
+  padding: 5px;
+  border: none;
+
+  //border: 1px solid $text-color;
+  //border-radius: 5px;
+  //:hover {
+  //    background-color: palevioletred !important
+  //}
+}
+
+
+.FormRadio input[type=radio] {
+  display: none;
+}
+
+.FormRadio label {
+  display: inline-block;
+  cursor: pointer;
+  position: relative;
+  padding-left: 25px;
+  margin-right: 0;
+  line-height: 18px;
+  user-select: none;
+  color: $white-color;
+  font-family: $font-2;
+  font-size: $size-text;
+}
+
+.FormRadio label:before {
+  content: "";
+  display: inline-block;
+  width: 16px;
+  height: 16px;
+  position: absolute;
+  left: 0;
+  bottom: 1px;
+  border: 1px solid $text-color;
+  border-radius: 50%;
+  background: none;
+}
+
+.FormRadio input[type=radio]:checked + label:before {
+  //background: $text-color2;
+  background: $white-color;
+  border: 1px solid $white-color;
+}
+
+input, textarea {
+  background: transparent;
+  color: $text-color;
+  padding: 5px 5px 0 5px;
+  //border: none;
+  border: 1px solid $text-color;
+
+  &::placeholder {
+    color: white;
+  }
+}
+
+input[type=number] {
+  background: transparent;
+  color: $text-color;
+  padding: 5px;
+  border: none;
+  border: 1px solid $text-color;
+}
+
+button {
+  background: transparent;
+  color: $text-color;
+  padding: 5px;
+  border: none;
+  border: 1px solid $text-color;
+}
+
+
+#square1 {
+  //z-index: 1;
+  position: fixed;
+  //left: 35%;
+  //width: 30%;
+  top: 0;
+  height: 100%;
+  box-shadow: 0 0 6vh rgba(0, 0, 0, 0.5), 0 0 0vh rgba(0, 0, 0, 0.5), 0 0 6vh rgba(0, 0, 0, 0.5), 0 0 0vh rgba(0, 0, 0, 0.5);
+  transition: 1s linear;
+}
+
+.ColWithOutPaddingMargim {
+  padding: 0 !important;
+  margin: 0 !important;
+}
+
+.GaleryImage {
+  max-width: 100%;
+
+}

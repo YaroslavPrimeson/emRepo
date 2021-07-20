@@ -1,0 +1,53 @@
+@import "Wrapper";
+
+.footer {
+  color: $text-color;
+  border-bottom: 1px solid $main-color-gold;
+  border-top: 1px solid $main-color-gold;
+
+  &__wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    text-align: center;
+    padding: 1em;
+    max-width: 1170px;
+    min-width: 480px;
+    margin: 0 auto;
+  }
+
+  &__title, &__contacts,  &__schedule {
+    width: 33.3%;
+    flex-basis: 33.3%;
+    flex-grow: 1;
+    font-size: $size-pading;
+    font-family: $under-title;
+  }
+  &__title {
+    font-size: $size-title;
+    font-family: $font-2;
+  }
+
+  &__contacts {
+
+  }
+
+  &__schedule {
+
+  }
+}
+
+@media (max-width: 480px) {
+  .footer{
+    &__wrapper{
+      flex-direction: column;
+      text-align: center;
+    }
+    &__title, &__contacts,  &__schedule {
+      width: 100%;
+      flex-basis: 100%;
+      flex-grow: 1;
+      padding: 5px 0;
+    }
+  }
+}

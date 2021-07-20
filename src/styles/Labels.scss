@@ -1,0 +1,72 @@
+@import "Wrapper";
+
+.labels {
+  position: absolute;
+  left: -20px;
+  top: -20px;
+  //text-align: left;
+  font-size: 1em;
+  width: 110px;
+  color: white;
+  //letter-spacing: 1.1px;
+
+  &__items {
+  }
+
+  &__item {
+    width: 75px;
+    border-radius: 50%;
+    //box-shadow: 0 0 5px 5px rgba(201, 190, 129, 0.6);
+    //padding: 10px 5px;
+    //background-color: rgba(201, 190, 129, 0.6);
+    //background: radial-gradient(circle, rgba(0,0,0,.3), rgba(201, 190, 129,.0));
+
+    //border-radius: 10px;
+    //margin: 10px 0;
+    //transform: rotate(-30deg);
+    font-weight: bold;
+    //text-align: left;
+    & img {
+      width: 100%;
+    }
+
+    & svg {
+      font-size: 2.1em;
+    }
+
+    &--sale {
+      //color: red;
+      //background-color: rgba(255,0,0,.6);
+    }
+
+    &--hit {
+      //color: yellow;
+      //background-color: rgba(255,0,255,.6);
+    }
+
+    &--recomend {
+      //color: blue;
+      //background-color: rgba(0,0,255,.6);
+    }
+
+    &--new {
+      //color: darkgreen;
+      //background-color: rgba(0,255,10,.8);
+    }
+  }
+
+  &__text {
+    &--sale {
+    }
+
+    &--hit {
+    }
+
+    &--recomend {
+    }
+
+    &--new {
+    }
+  }
+
+}

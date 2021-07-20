@@ -1,0 +1,73 @@
+@import "Wrapper";
+.add__basket__goods {
+  position: fixed;
+  width: 100%;
+  height: 100vh;
+  z-index: 1002;
+
+  &__wrapper {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    background-color: $text-color2;
+    top: -80px;
+    animation: .8s moveToBasketBackground forwards ease-out;
+
+  }
+
+  &__flying {
+    position: absolute;
+    width: 20%;
+    right: 50%;
+    top: 50%;
+    transform: translate(50%, -50%);
+    animation: 1s moveToBasket forwards ease-out;
+  }
+
+  & .card__wrapper {
+    height: 100%;
+  }
+
+  & .card {
+    height: 100%;
+  }
+}
+
+@keyframes moveToBasketBackground {
+  from {
+    opacity: 1;
+  }
+  30% {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
+}
+@keyframes moveToBasket {
+  from {
+    right: 50%;
+    top: 50%;
+    transform: translate(50%, -50%);
+  }
+  30% {
+    right: 50%;
+    top: 50%;
+    transform: translate(50%, -50%);
+
+  }
+  90% {
+    right: calc(110px + 5%);
+    top: 0;
+    transform: translate(0) scale(0.3);
+    opacity: 1;
+  }
+  to {
+    right: calc(110px + 5%);
+    top: 0;
+    transform: translate(0) scale(0.3);
+    opacity: 0;
+    transform-origin: right top;
+  }
+
+}

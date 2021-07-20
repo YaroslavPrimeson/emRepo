@@ -1,0 +1,69 @@
+@import "Wrapper";
+
+.category {
+  display: flex;
+  color: $text-color;
+  align-items: center;
+  padding: 10px;
+  justify-content: space-between;
+
+
+  &__title {
+    text-align: left;
+    font-size: $size-text2;
+    padding: 0 10px;
+    flex-basis: 200px;
+    background: url("../components/Svg/Images/right-arrow.svg") no-repeat;
+    background-position: right;
+
+  }
+
+  &__items {
+    padding: 0 20px;
+    display: flex;
+    align-items: center;
+    list-style: none;
+    width: 80%;
+    z-index: 1;
+    margin: 0;
+  }
+
+  &__item {
+    user-select: none;
+    flex-basis: 200px;
+    flex-shrink: 1;
+    flex-grow: 1;
+    font-family: $button-text;
+    padding: calc(.35vh + .35vw) 0;
+    font-size: $size-text-button;
+    cursor: pointer;
+    text-decoration: none;
+    border-top: 1px solid $main-color-gold;
+    border-bottom: 1px solid $main-color-gold;
+    border-right: 1px solid $main-color-gold;
+    box-sizing: border-box;
+    transition: background-color .5s;
+    font-weight: bold;
+
+    &:hover, &--active {
+      background-color: $text-color2;
+    }
+
+    &:first-child {
+      border-left: 1px solid $main-color-gold;
+    }
+  }
+}
+
+@media (max-width: 991px){
+  .category{
+    flex-wrap: wrap;
+    &__title{
+      flex-basis: 100%;
+      padding-bottom: 5px;
+    }
+    &__items{
+      flex-basis: 100%;
+    }
+  }
+}

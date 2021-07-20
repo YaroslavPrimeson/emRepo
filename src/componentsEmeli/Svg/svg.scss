@@ -1,0 +1,197 @@
+@import "../../styles/Wrapper";
+.svg__tree {
+  z-index: -1;
+}
+
+.PositionMobileSimplePageSvg {
+  position: absolute;
+  left: -11%;
+  top: 5%;
+  height: 90vh;
+}
+
+.PositionCoffePlant2Svg {
+  //position: absolute;
+  height: 70%;
+  //right: -5%;
+  //bottom: 0;
+}
+
+.UpArrowSvg {
+  stroke: rgba(201, 171, 129, .69);
+  stroke-width: 20;
+  fill: rgba(201, 171, 129, .69);
+  background-color: #fff;
+  width: 50px;
+}
+
+.CoffeePlantSvg {
+  stroke-width: 20;
+  stroke-linejoin: round;
+  stroke: rgba(201, 171, 129, .69);
+  fill: none;
+  stroke-dasharray: 6200%;
+  //animation: CoffeePlantSvg 15s linear 0s forwards;
+}
+
+.WebSVGPath {
+  stroke-width: .2;
+  stroke-linejoin: round;
+  stroke: rgba(201, 171, 129, .69);
+  fill: none;
+  stroke-dasharray: 1200%;
+  //animation: webSvgDash 5s linear 0s forwards;
+}
+
+@keyframes webSvgDash {
+  0% {
+    stroke-dashoffset: 1200%;
+  }
+  100% {
+    stroke-dashoffset: 0%;
+  }
+}
+
+@keyframes CoffeePlantSvg {
+  0% {
+    stroke-dashoffset: 6200%;
+  }
+  //50% {
+  //  stroke-dashoffset: 0%;
+  //}
+  //100%{
+  //  stroke-dashoffset: 6200%;
+  //}
+  100% {
+    stroke-dashoffset: 0%;
+  }
+}
+
+.patternDraw {
+
+  stroke-linejoin: round;
+  stroke: rgba(201, 171, 129, .69);
+  fill: none;
+  stroke-dasharray: 1000%;
+  //animation: PatternDrawSvg 15s linear 0s infinite;
+}
+
+@keyframes PatternDrawSvg {
+  0% {
+    stroke-dashoffset: 5000%;
+  }
+
+  100% {
+    stroke-dashoffset: 0%;
+  }
+}
+
+.berryBranch {
+  stroke-width: 100;
+  stroke-linejoin: round;
+  stroke: rgba(201, 171, 129, .69);
+  fill: none;
+  stroke-dasharray: 100000%;
+  animation: BerryBranchSvg 5s linear forwards;
+
+}
+@keyframes BerryBranchSvg {
+  0% {
+    stroke-dashoffset: 100000%;
+  }
+
+  100% {
+    stroke-dashoffset: 0%;
+  }
+}
+
+.BranchSvg {
+  width: 100px;
+  height: 100px
+}
+.Roster {
+
+  height: 50%;
+}
+.CoffeeCap {
+
+  height: 50%;
+}
+
+.RosterSvg {
+  stroke-width: 100;
+  stroke-linejoin: round;
+  stroke: white;
+  fill: transparent;
+  stroke-dasharray: 450000%;
+  //animation: 5s RosterSvgDraw 0s linear forwards;
+}
+
+@keyframes RosterSvgDraw {
+  0% {
+    stroke-dashoffset: 450000%;
+  }
+  100% {
+    stroke-dashoffset: 0%;
+  }
+}
+.CoffeeCapSvg {
+  stroke-width: 100;
+  stroke-linejoin: round;
+  stroke: white;
+  fill: transparent;
+  stroke-dasharray: 450000%;
+  //animation: 5s CoffeeCapSvgDraw 0s linear forwards;
+}
+
+@keyframes CoffeeCapSvgDraw {
+  0% {
+    stroke-dashoffset: 450000%;
+  }
+  100% {
+    stroke-dashoffset: 0%;
+  }
+}
+.CoffeeBranchSvg {
+  stroke-width: 30;
+  stroke-linejoin: round;
+  stroke: $main-color-gold;
+  fill: transparent;
+  stroke-dasharray: 1000%;
+  animation: 5s CoffeeBranchSvgDraw 0s linear forwards;
+}
+
+@keyframes CoffeeBranchSvgDraw {
+  0% {
+    stroke-dashoffset: 1000%;
+  }
+  100% {
+    stroke-dashoffset: 0%;
+  }
+}
+
+///////////////////////////////////////////////////////////////
+// LOGO
+///////////////////////////////////////////////////////////////
+.logoSvgPath{
+  stroke-width: 30;
+  stroke-linejoin: round;
+  stroke: transparent;
+  fill: transparent;
+}
+.logoSvgPath1{
+  stroke-dasharray: 1500%;
+  animation: 5s logoSvgPath1 0s linear forwards;
+}
+@keyframes logoSvgPath1 {
+  0% {
+    stroke-dashoffset: 1500%;
+  }
+  30% {
+    stroke: $main-color-gold;
+  }
+  100% {
+    stroke-dashoffset: 0%;
+    stroke: $main-color-gold;
+  }
+}

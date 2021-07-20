@@ -1,0 +1,123 @@
+@import "Wrapper";
+
+.radio1 {
+  color: white;
+}
+
+:root {
+  --color: $main-color-gold;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: border-box; // reset border, need fix
+}
+
+.radio {
+
+  &__main {
+    padding-left: 5px;
+    margin: 0;
+  }
+
+  &__title {
+    color: $text-color;
+    padding: .1em 1em 1em;
+    font-size: $size-text-button;
+    text-align: left;
+  }
+
+  padding-top: 3px;
+  padding-left: 30px;
+  width: 200px;
+  font-size: 1.1em;
+  color: $main-color-gold;
+  text-align: left;
+
+  display: grid;
+  grid-template-columns: min-content auto;
+  grid-template-rows: min-content auto;
+  grid-gap: 0.1em .5em;
+  align-items: center;
+
+  //slightly bump up the visual size of the label text using scale(), and bring the opacity back up
+  &:focus-within {
+    .radio__label {
+      transform: scale(1.05);
+      opacity: 1;
+    }
+  }
+}
+
+.radio__label {
+  line-height: 1; // centered
+  cursor: pointer;
+
+  //The first adjustment we'll make is to add a transition and reduce the opacity of the radio__label:
+  transition: 180ms all ease-in-out;
+  opacity: 0.8;
+}
+
+.radio__input {
+  display: flex; //positioning items
+
+  input {
+    // Creating the circle with radial-gradient
+
+    &:checked + .radio__control {
+      background: radial-gradient(currentcolor 50%, rgba(255, 0, 0, 0) 51%);
+      background-position: center;
+    }
+
+    &:focus + .radio__control {
+      box-shadow: 0 0 0 0.05em rgba(255, 255, 255, .1), 0 0 0.15em 0.1em currentColor;
+    }
+  }
+
+  // hide original input
+  input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+  }
+}
+
+.radio__control {
+  //display: block;
+  width: 1em;
+  height: 1em;
+  border-radius: 50%;
+  border: 0.1em solid currentColor;
+  transform: translateY(-0.05em);
+  cursor: pointer;
+
+  // Creating the circle with :before
+  display: grid;
+  place-items: center;
+}
+
+input + .radio__control::before {
+  //we create the :before element, including a transition and using transform hide it with scale(0)
+  content: "";
+  width: 0.5em;
+  height: 0.5em;
+  box-shadow: inset 0.5em 0.5em currentColor;
+  border-radius: 50%;
+  transition: 180ms transform ease-in-out;
+  transform: scale(0);
+}
+
+//when the input is :checked, we make it visible with scale(1) with a nicely animated result thanks to the transition
+input:checked + .radio__control::before {
+  transform: scale(1);
+}
+
+@media (max-width: 767px) {
+  .radio {
+    font-size: 1.5em;
+    grid-template-columns: max-content auto;
+    grid-template-rows: max-content auto;
+    white-space: nowrap;
+  }
+}

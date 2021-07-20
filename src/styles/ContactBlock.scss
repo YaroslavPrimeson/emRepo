@@ -1,0 +1,139 @@
+@import "../Landing/Landinn";
+@import "Wrapper";
+
+.ContactBlock {
+  margin: 0!important;
+  box-sizing: border-box;
+
+  display: flex;
+  width: 100%;
+  font-family: $font-2;
+  align-items: center;
+
+  &__wrapper{
+    @include max-width-paddings;
+    min-width: 480px;
+  }
+}
+
+.LeftBlock__cont {
+  text-align: center;
+  //width: 50%;
+}
+
+.RightBlock {
+  //width: 50%;
+
+  iframe {
+    filter: drop-shadow(2px 3px 5px black);
+    //filter: contrast(50%);
+    width: 100%;
+    height: 50vh;
+    border: none;
+  }
+}
+
+.ContactForm {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+
+  button {
+    margin: 1em;
+    width: 5em;
+  }
+
+  input {
+    margin-bottom: 1em;
+    width: 100%;
+
+    &:focus {
+      outline: none;
+    }
+
+  }
+
+  textarea {
+    width: 100%;
+    height: 8em;
+
+
+  }
+}
+
+textarea {
+  resize: none;
+}
+
+
+////////////////////////////////////////////////
+//MAX
+////////////////////////////////////////////////
+.ContactInputContainer {
+  width: 100%;
+
+
+}
+
+.ContactHeadersContainer {
+  margin: 2.5vh;
+}
+
+.form-control {
+  margin: $size-pading;
+  display: block;
+  //width: calc(100% - 1.5vh - 1.5vw);
+  //height: calc(1.5em + .75rem + 2px);
+  //padding: $size-pading2 $size-pading;
+  //padding: 1.5em 1em;
+  font-size: $size-pading;
+  font-weight: 400;
+  line-height: 1.5;
+  color: $text-color !important;
+  background-color: transparent!important;
+  background-clip: padding-box;
+  border: 1px solid $text-color!important;
+  transition: border-color .15s ease-in-out, box-shadow .15s ease-in-out;
+
+  &:focus {
+    background-color: transparent;
+    outline: none;
+    box-shadow: none !important;
+    border: 1px solid $text-color;
+
+  }
+
+  &::placeholder {
+    color: $text-color;
+  }
+}
+
+.ContactInputButton {
+  color: $text-color;
+  margin: $size-pading2 $size-pading;
+  display: flex;
+  justify-content: center;
+}
+.ContactBlock__MapContainer {
+  height: 50vh;
+
+  background-color: #333;
+  .leaflet-container {
+    height: 100%;
+  }
+  .leaflet-control {
+    display: none;
+  }
+  .leaflet-control-container {
+    height: 100px;
+  }
+}
+@media (max-width: 767px) {
+  .ContactBlock{
+    flex-direction: column;
+  }
+  .form-control{
+    margin-left: 0;
+  }
+}

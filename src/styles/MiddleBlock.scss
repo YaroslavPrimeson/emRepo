@@ -1,0 +1,127 @@
+@import "Wrapper";
+
+.middle {
+  z-index: 5;
+  box-sizing: border-box;
+  overflow: hidden;
+  @include max-width-paddings;
+  min-width: 480px;
+  position: relative;
+  min-height: 75vh;
+
+  &__wrapper {
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 100%;
+    color: white;
+    overflow: hidden;
+    padding-top: $block-padding-top;
+  }
+
+  &__pic {
+    width: 33.3%;
+    position: relative;
+    right: -1%;
+    display: flex;
+    align-items: flex-end;
+    position: absolute;
+    right: 0;
+
+    top: calc(5em + 10vh);
+    //border-bottom: 1px solid $main-color-gold;
+
+    & img {
+      width: 100%;
+    }
+  }
+
+  &__text {
+    //border-bottom: 1px solid $main-color-gold;
+    width: 33.3%;
+    box-sizing: border-box;
+    padding: 1em;
+    position: absolute;
+    text-align: center;
+    left: 0;
+    top: calc(5em + 10vh);
+
+  }
+
+  &__logo {
+    width: 33.3%;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    top: calc(5em + 50%);
+
+    & img {
+      width: 100%;
+    }
+  }
+
+  &__title {
+    font-size: $size-title;
+    white-space: nowrap;
+    font-family: $font-4;
+  }
+
+  &__description {
+    font-size: $size-pading;
+    color: rgba(201, 171, 129, .69);
+    white-space: nowrap;
+    font-family: $font-3;
+    font-style: italic;
+  }
+
+  &__review {
+    font-size: $size-text-small;
+    font-weight: 400;
+    line-height: 1.5;
+    padding-top: 2em;
+    font-family: $font-5;
+  }
+
+  &__title, &__description {
+    box-sizing: border-box;
+    text-transform: uppercase;
+  }
+}
+
+@media (max-width: 991px) {
+
+  .middle {
+    &__wrapper {
+      flex-direction: column;
+      align-items: center;
+      padding: 0;
+      .middle__text {
+        width: 100%;
+      }
+    }
+
+    &__logo, &__pic {
+      flex-basis: 50%;
+      position: static;
+
+    }
+
+    &__text {
+      position: static;
+      order: 3;
+      flex-grow: 1;
+      flex-basis: 100%;
+      font-size: 1.5em;
+    }
+
+    &__description {
+      white-space: normal;
+    }
+  }
+}
+

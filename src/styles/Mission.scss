@@ -1,0 +1,12 @@
+@import "Wrapper";
+
+.mission {
+  text-align: center;
+  //@include max-width-paddings;
+  min-width: 480px;
+
+  //&__wrapper {
+  //  border-right: 1px solid $main-color-gold;
+  //  border-left: 1px solid $main-color-gold;
+  //}
+}

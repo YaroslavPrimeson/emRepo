@@ -1,0 +1,83 @@
+@import "Wrapper";
+
+.videoplayer {
+  height: 70vh;
+  width: 100vw;
+  overflow: hidden;
+  position: relative;
+
+  &__closeVideo {
+    position: absolute;
+    right: 1em;
+    top: 1em;
+    width: 2em;
+    height: 2em;
+    z-index: 100;
+    cursor: pointer;
+    background-image: url("../Images/icon/cancel.svg");
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+
+  &__openVideo {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    z-index: 10003;
+    background-color: $modal-background;
+
+    &__iframe {
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      transform: translate(-50%, -50%);
+      opacity: 0;
+      animation: 1s opacityVideo forwards;
+    }
+  }
+
+  @keyframes opacityVideo {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+
+  &__video {
+    display: flex;
+    justify-content: center;
+    margin: 0 auto;
+
+  }
+
+  &__preview {
+    margin: auto;
+    width: 100%;
+
+    & img {
+      width: 100%;
+      height: auto;
+      object-fit: cover
+    }
+  }
+
+}
+
+
+.parallax {
+  &__container {
+    background-image: url("../Images/coffee-big.jpg");
+    height: 500px;
+    width: 100%;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+  }
+
+}

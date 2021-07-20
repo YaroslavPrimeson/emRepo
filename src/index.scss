@@ -1,0 +1,62 @@
+@import "App";
+@import 'styles/AddBasket';
+@import 'styles/TopComponent';
+@import 'styles/Card';
+@import "styles/CallBtn";
+@import "styles/CardDescription";
+@import "styles/CartList";
+@import "styles/Cards";
+@import "styles/CategoryMenu";
+@import "styles/Button";
+@import "styles/ContactBlock";
+@import "styles/Create";
+@import "styles/Cross";
+@import "styles/Description";
+@import "styles/DropMenu";
+@import "styles/Footer";
+@import "styles/GalleryNew";
+@import "styles/HeaderBlock";
+@import "styles/Labels";
+@import "styles/Lines";
+@import "styles/MiddleBlock";
+@import "styles/Mission";
+@import "styles/Modal";
+@import "styles/ModalCard";
+@import "styles/Navigation";
+@import "styles/OldPrice";
+@import "styles/PlayButton";
+@import "styles/Post";
+@import "styles/Prelodaer";
+@import "styles/Radio";
+@import "styles/ReklItem";
+@import "styles/Rekl";
+@import "styles/SelectAbs";
+@import "styles/Slider";
+@import "styles/SubMission";
+@import "styles/Video";
+@import "styles/NotFound";
+@import "styles/MainPage";
+@import "styles/Admin";
+
+
+
+html {
+    scroll-behavior: smooth
+}
+
+body {
+    padding: 0;
+    margin: 0;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+    font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+

@@ -1,0 +1,98 @@
+
+.App {
+    /*padding: 0 5%;*/
+    /*background-color: #0b1315;*/
+    width: 100%;
+    //overflow: hidden;
+
+}
+
+/*Hide Input number field default arrows*/
+/* Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+/* Firefox */
+input[type=number] {
+    -moz-appearance: textfield;
+}
+
+.PositionPhoneSvg {
+    width: 90px;
+    height: 90px;
+    position: fixed;
+    padding: 1vh;
+    opacity: .4;
+    transition: .4s;
+    //animation: coin 3s infinite linear;
+}
+
+.PositionPhoneSvg:hover {
+    opacity: .8;
+    cursor: pointer;
+    animation: none;
+
+}
+
+.PositionPhoneSvg:hover path {
+    fill: white;
+
+}
+
+.App__phone {
+    position: absolute;
+    width: 100px;
+    height: 100px;
+    box-sizing: border-box;
+    overflow: hidden;
+    right: 10%;
+    z-index: 100;
+}
+
+.App__phone svg {
+    bottom: 10% !important;
+}
+
+
+.arrow__up:hover {
+    opacity: 1;
+}
+
+.arrow__up a {
+    color: rgba(201, 171, 129, .5);
+}
+
+@keyframes coin {
+    0% {
+        transform: rotateY(0deg);
+    }
+    100% {
+        transform: rotateY(360deg);
+    }
+}
+
+.carousel__container{
+    width: 60vw;
+    height: 50vh;
+    margin: 100px auto;
+}
+.carousel{
+    height: 100%;
+}
+.carousel-inner{
+    height: 100%;
+}
+.carousel-item{
+height: 100%;
+}
+.carousel-item.active{
+    display:flex;
+    justify-content: center;
+}
+.carousel-control-next-icon, .carousel-control-prev-icon{
+    width: 50px!important;
+    height: 50px!important;
+}

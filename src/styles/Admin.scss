@@ -1,0 +1,71 @@
+@import "Wrapper";
+.nav-tabs{
+  display: flex;
+  justify-content: center;
+}
+.nav-tabs .nav-link{
+  width: 49vw!important;
+  color:  rgba(201, 171, 129, 0.69)!important;
+}
+.nav-tabs .nav-item.show .nav-link, .nav-tabs .nav-link.active{
+  color: #000000!important;
+}
+.tab-content{
+  padding: 2rem;
+}
+.admin__row__categories {
+  display: flex;
+  justify-content: center;
+  margin: 1rem;
+  padding:1rem ;
+  border: 1px solid $text-color2;
+}
+.admin__col__categories {
+  display: flex;
+  flex-direction: column;
+  color:$color-gold;
+ }
+.admin__sub__category_block {
+  flex-direction: column;
+
+}
+.admin__sub__category {
+  margin-left: 2em;
+  margin-bottom: 1em;
+}
+.admin__col__buttons {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.admin__modal {
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  .form-control {
+    width: 100%;
+    margin-left: 0;
+    margin-right: 0;
+  }
+}
+
+.modal-content{
+  background-color: $background!important;
+}
+.modal-footer{
+  border-top: 1px solid $color-gold!important;
+}
+.admin__row__goodsegories{
+  color: $color-gold;
+  border: 1px solid;
+  margin-top: 25px;
+  padding: 1rem;
+}
+.admin__modal {
+  color: $color-gold;
+}
+.admin__option__input{
+  color: $color-gold;
+  background-color: $background!important;
+}

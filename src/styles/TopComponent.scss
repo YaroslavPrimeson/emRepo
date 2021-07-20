@@ -1,0 +1,234 @@
+@import "Wrapper";
+
+.top {
+  &__wrapper {
+    @include max-width-paddings;
+    padding-top: $block-padding-top;
+    min-width: 480px;
+    margin: 0 auto;
+    height: fit-content;
+    min-height: 70vh;
+    font-family: $font-3;
+
+  }
+
+  position: relative;
+  width: 100%;
+  height: 100%;
+min-height: 70vh;
+  //overflow: hidden !important;
+  display: flex;
+
+  &__description-card {
+    font-family: $font-2;
+    color: $color-gold;
+    width: 30%;
+    min-width: 300px;
+    position: absolute;
+    right: 0;
+    top: 1vh;
+  }
+
+  &__image {
+    width: 40%;
+    position: absolute;
+    left: 20%;
+    top: 20%;
+    min-width: 200px;
+    max-width: 300px;
+
+    img {
+      width: 100%;
+    }
+
+  }
+
+  &__title {
+    width: 20%;
+    min-width: 150px;
+    position: absolute;
+    left: 10%;
+    top: 1vh;
+    color: $white-color;
+
+    h2 {
+      font-size: $size-text;
+    }
+
+    p {
+      color: $text-color;
+      font-size: $size-text;
+    }
+  }
+
+  &__down-title {
+    width: 20%;
+    min-width: 150px;
+    position: absolute;
+    left: 10%;
+    bottom: 0;
+    color: $text-color;
+
+    h3 {
+      font-size: $size-text-small;
+    }
+
+    p {
+      font-size: $size-text-small;
+    }
+  }
+
+  &__description-buttons {
+    position: absolute;
+    bottom: -25%;
+    left: 0;
+    display: flex;
+    justify-content: space-between;
+    width: 300px;
+    font-family: $button-text;
+    color: $text-color;
+
+  }
+
+  &__best-title {
+    position: absolute;
+    bottom: 0;
+    right: 20%;
+
+    h3 {
+      color: $text-color;
+      font-size: $size-text;
+    }
+
+    p {
+      color: $white-color;
+      font-size: $size-text;
+    }
+  }
+
+
+  &__transparent {
+    z-index: 1;
+    position: absolute;
+    left: 35%;
+    width: 30%;
+    height: 100%;
+    box-shadow: 0 0 6vh rgba(0, 0, 0, .5), 0 0 0 rgba(0, 0, 0, .5), 0 0 6vh rgba(0, 0, 0, .5), 0 0 0 rgba(0, 0, 0, .5);
+  }
+
+  &__text {
+
+    margin: 25vh auto auto;
+    color: #fff;
+    font-size: calc(3.3vh + 3.3vw);
+    line-height: calc(3.1vh + 3.1vw);
+    white-space: nowrap;
+    text-transform: uppercase;
+
+    &--title {
+      font-family: $main-title-font;
+      font-size: calc(4.3vh + 4.3vw);
+      line-height: calc(4.1vh + 4.1vw);
+      letter-spacing: 3px;
+    }
+
+    &--last {
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+    }
+
+    &--position {
+      font-family: $font-1;
+      font-size: calc(1.3vh + 1.3vw);
+      white-space: nowrap;
+      text-transform: none;
+    }
+  }
+
+  &__comment {
+    line-height: 1.5;
+    position: absolute;
+    bottom: 0;
+    //left: 10%;
+
+    &--text {
+      font-family: $font-2;
+      font-weight: 400;
+      font-size: calc(.8vh + .8vw);
+      white-space: nowrap;
+      text-transform: uppercase;
+
+      &:last-child {
+        color: rgba(201, 171, 129, .69) !important;
+      }
+    }
+  }
+}
+
+.TopRightSvg {
+  &.PositionMobileSimplePageSvg {
+    left: 100%;
+    right: 0;
+    transform: translate(-12%, 10%) rotateY(180deg);
+
+  }
+
+  .WebSVGPath {
+    animation-delay: 2s;
+  }
+}
+
+
+@media (max-width: 480px) {
+  .top {
+    &__text {
+      &--title {
+        font-size: .7em;
+      }
+    }
+  }
+}
+
+@media (min-width: 481px) and (max-width: 767px) {
+  .top {
+    &__text {
+      &--title {
+        font-size: .8em;
+      }
+    }
+  }
+}
+
+@media (max-width: 767px) {
+  .top {
+    display: block;
+    padding: 5%;
+
+    &__wrapper {
+
+    }
+
+    &__description-card {
+      position: static;
+      width: 100%;
+
+    }
+
+    &__image {
+      position: static;
+      width: 100%;
+      margin: 0 auto;
+    }
+
+    .top__down-title, .top__title, .top__best-title, .top__description-buttons {
+      position: static;
+      text-align: right;
+      width: 100%;
+    }
+
+    .top__description-buttons {
+      padding: 2em 0;
+    }
+  }
+}

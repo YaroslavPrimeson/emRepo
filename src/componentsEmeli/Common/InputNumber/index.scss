@@ -1,0 +1,46 @@
+@import "./src/Landing/Landinn";
+//@import "./src/components/Wrapper/index";
+.InputNumberButton {
+  position: absolute;
+  width: 10px;
+  height: 6px;
+}
+
+.InputNumber {
+  position: relative;
+  fill: $text-color;
+
+  & input[name=input-number] {
+    text-align: center;
+    width: 50px;
+    height: 100%;
+    margin: 0;
+    padding: 10px 0;
+    min-width: 100px;
+    -webkit-appearance: none;
+    outline: none;
+  }
+
+  .InputUp {
+    position: absolute;
+    right: 20%;
+    top: 15%;
+    z-index: 10;
+    //background-color: white;
+    cursor: pointer;
+  }
+
+  .InputDown {
+    position: absolute;
+    right: 20%;
+    bottom: 15%;
+    //background-color: white;
+    cursor: pointer;
+  }
+
+  svg {
+    width: 10px;
+    height: 12px;
+    position: absolute;
+  }
+}
